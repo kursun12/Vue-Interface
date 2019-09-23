@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-md-10 col-lg-7">
+  <div class="col-12 ">
     <div class="list-group list-group-flush">
       <div
         class="list-group-item d-flexbox align-items-start"
@@ -21,11 +21,12 @@
           </div>
           <div class="owner-name">
             <span
-              class="font-weight-bold text-primary mr-1"
-              contenteditable="contenteditable"
-              @blur="$emit('edit', item.petOwner, 'petOwner', $event.target.innerText)"
+              class="font-weight-bold text-primary mr-1"              
             >Owner:</span>
-            <span>{{item.petOwner}}</span>
+            <span
+            contenteditable="contenteditable"
+              @blur="$emit('edit', item.petOwner, 'petOwner', $event.target.innerText)"
+            >{{item.petOwner}}</span>
           </div>
           <div
             contenteditable="contenteditable"
@@ -55,5 +56,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 </style>
